@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>API reference &mdash; SATLAS 0.1.0b35 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="_static/css/spc-extend.css">
+    <link rel="stylesheet" href="_static/scipy.css" type="text/css" >
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" >
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0b35',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/copybutton.js"></script>
+    <link rel="index" title="Index" href="genindex.html" >
+    <link rel="search" title="Search" href="search.html" >
+    <link rel="top" title="SATLAS 0.1.0b35 documentation" href="index.html" >
+    <link rel="next" title="satlas.models.basemodel.BaseModel" href="generated/satlas.models.basemodel.BaseModel.html" >
+    <link rel="prev" title="SATLAS – Statistical Analysis Toolbox for Laser Spectroscopy" href="index.html" > 
+  </head>
+  <body>
+
+  <div class="container">
+    <div class="header">
+    </div>
+  </div>
+
+
+    <div class="container">
+      <div class="main">
+        
+	<div class="row-fluid">
+	  <div class="span12">
+	    <div class="spc-navbar">
+              
+    <ul class="nav nav-pills pull-left">
+	
+        <li class="active"><a href="index.html">SATLAS 0.1.0b35 documentation</a></li>
+	 
+    </ul>
+              
+              
+    <ul class="nav nav-pills pull-right">
+      <li class="active">
+        <a href="genindex.html" title="General Index"
+           accesskey="I">index</a>
+      </li>
+      <li class="active">
+        <a href="py-modindex.html" title="Python Module Index"
+           >modules</a>
+      </li>
+      <li class="active">
+        <a href="generated/satlas.models.basemodel.BaseModel.html" title="satlas.models.basemodel.BaseModel"
+           accesskey="N">next</a>
+      </li>
+      <li class="active">
+        <a href="index.html" title="SATLAS – Statistical Analysis Toolbox for Laser Spectroscopy"
+           accesskey="P">previous</a>
+      </li>
+    </ul>
+              
+	    </div>
+	  </div>
+	</div>
+        
+
+	<div class="row-fluid">
+          <div class="span9">
+            
+        <div class="bodywrapper">
+          <div class="body" id="spc-section-body">
+            
+  <div class="section" id="api-reference">
+<span id="api-ref"></span><h1>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-models">
+<h3>General Models<a class="headerlink" href="#general-models" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The abstract baseclass <a class="reference internal" href="generated/satlas.models.basemodel.BaseModel.html#satlas.models.basemodel.BaseModel" title="satlas.models.basemodel.BaseModel"><code class="xref py py-class docutils literal"><span class="pre">BaseModel</span></code></a> defines a few methods for retrieving information about the current state of the fit. These methods are not documented in the child classes, but will be regularly used.</p>
+</div>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/satlas.models.basemodel.BaseModel.html#satlas.models.basemodel.BaseModel" title="satlas.models.basemodel.BaseModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.basemodel.BaseModel</span></code></a>()</td>
+<td>Abstract baseclass for all models.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/satlas.models.summodel.SumModel.html#satlas.models.summodel.SumModel" title="satlas.models.summodel.SumModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.summodel.SumModel</span></code></a>(models)</td>
+<td>Create a model that sums all the underlying models for a single input variable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/satlas.models.linkedmodel.LinkedModel.html#satlas.models.linkedmodel.LinkedModel" title="satlas.models.linkedmodel.LinkedModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.linkedmodel.LinkedModel</span></code></a>(models)</td>
+<td>Links different models for simultaneous fitting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/satlas.models.models.MiscModel.html#satlas.models.models.MiscModel" title="satlas.models.models.MiscModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.models.MiscModel</span></code></a>(func,&nbsp;args[,&nbsp;...])</td>
+<td>Constructs a response from a supplied function.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/satlas.models.models.PolynomialModel.html#satlas.models.models.PolynomialModel" title="satlas.models.models.PolynomialModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.models.PolynomialModel</span></code></a>(args)</td>
+<td>Constructs a polynomial response.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="specialized-models">
+<h3>Specialized Models<a class="headerlink" href="#specialized-models" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/satlas.models.hfsmodel.HFSModel.html#satlas.models.hfsmodel.HFSModel" title="satlas.models.hfsmodel.HFSModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.hfsmodel.HFSModel</span></code></a>(I,&nbsp;J,&nbsp;ABC,&nbsp;...)</td>
+<td>Constructs a HFS spectrum, consisting of different peaks described by a certain profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/satlas.models.transformmodel.TransformHFSModel.html#satlas.models.transformmodel.TransformHFSModel" title="satlas.models.transformmodel.TransformHFSModel"><code class="xref py py-obj docutils literal"><span class="pre">satlas.models.transformmodel.TransformHFSModel</span></code></a>(...)</td>
+<td>Create an HFSModel that applies both a pre-processing transformation on the input data and a post-processing transformation on the output data.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="module-satlas.stats.fitting">
+<span id="fitting-routines"></span><h2>Fitting routines<a class="headerlink" href="#module-satlas.stats.fitting" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of fitting routines specialised for BaseModel objects. Note that not all functions are loaded into the global satlas namespace.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.calculate_analytical_uncertainty.html#satlas.stats.fitting.calculate_analytical_uncertainty" title="satlas.stats.fitting.calculate_analytical_uncertainty"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.calculate_analytical_uncertainty</span></code></a>(f,&nbsp;x,&nbsp;y)</td>
+<td>Calculates the analytical errors on the parameters, by changing the value for a parameter and finding the point where the chisquare for the refitted parameters is one greater.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.chisquare_fit.html#satlas.stats.fitting.chisquare_fit" title="satlas.stats.fitting.chisquare_fit"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.chisquare_fit</span></code></a>(f,&nbsp;x,&nbsp;y)</td>
+<td>Use a non-linear least squares minimization (Levenberg-Marquardt) algorithm to minimize the chi-square of the fit to data <em>x</em> and <em>y</em> with errorbars <em>yerr</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.chisquare_model.html#satlas.stats.fitting.chisquare_model" title="satlas.stats.fitting.chisquare_model"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.chisquare_model</span></code></a>(params,&nbsp;...)</td>
+<td>Model function for chisquare fitting routines as established in this module.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.chisquare_spectroscopic_fit.html#satlas.stats.fitting.chisquare_spectroscopic_fit" title="satlas.stats.fitting.chisquare_spectroscopic_fit"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.chisquare_spectroscopic_fit</span></code></a>(f,&nbsp;x,&nbsp;y)</td>
+<td>Use the <a class="reference internal" href="fitting/satlas.stats.fitting.chisquare_fit.html#satlas.stats.fitting.chisquare_fit" title="satlas.stats.fitting.chisquare_fit"><code class="xref py py-func docutils literal"><span class="pre">chisquare_fit</span></code></a> function, automatically estimating the errors on the counts by the square root.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.likelihood_fit.html#satlas.stats.fitting.likelihood_fit" title="satlas.stats.fitting.likelihood_fit"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.likelihood_fit</span></code></a>(f,&nbsp;x,&nbsp;y)</td>
+<td>Fits the given model to the given data using the Maximum Likelihood Estimation technique.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.likelihood_walk.html#satlas.stats.fitting.likelihood_walk" title="satlas.stats.fitting.likelihood_walk"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.likelihood_walk</span></code></a>(f,&nbsp;x,&nbsp;y)</td>
+<td>Calculates the uncertainty on MLE-optimized parameter values by performing a random walk through parameter space and comparing the resulting loglikelihood values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.likelihood_x_err.html#satlas.stats.fitting.likelihood_x_err" title="satlas.stats.fitting.likelihood_x_err"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.likelihood_x_err</span></code></a>(f,&nbsp;x,&nbsp;...)</td>
+<td>Calculates the loglikelihood for a model given x and y values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.likelihood_lnprob.html#satlas.stats.fitting.likelihood_lnprob" title="satlas.stats.fitting.likelihood_lnprob"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.likelihood_lnprob</span></code></a>(...)</td>
+<td>Calculates the logarithm of the probability that the data fits the model given the current parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.likelihood_loglikelihood.html#satlas.stats.fitting.likelihood_loglikelihood" title="satlas.stats.fitting.likelihood_loglikelihood"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.likelihood_loglikelihood</span></code></a>(f,&nbsp;...)</td>
+<td>Given a parameters object, a Model object, experimental data and a loglikelihood function, calculates the loglikelihood for all data points.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.create_band.html#satlas.stats.fitting.create_band" title="satlas.stats.fitting.create_band"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.create_band</span></code></a>(f,&nbsp;x,&nbsp;...)</td>
+<td>Calculates prediction or confidence bounds at the 1 <img class="math" src="_images/math/2298cf1485084afe72757a9c8483af49a138d81f.png" alt="\sigma"/> level.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="fitting/satlas.stats.fitting.assign_hessian_estimate.html#satlas.stats.fitting.assign_hessian_estimate" title="satlas.stats.fitting.assign_hessian_estimate"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.assign_hessian_estimate</span></code></a>(...)</td>
+<td>Calculates the Hessian of the model at the given parameters, and associates uncertainty estimates based on the inverted Hessian matrix.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="fitting/satlas.stats.fitting.process_walk.html#satlas.stats.fitting.process_walk" title="satlas.stats.fitting.process_walk"><code class="xref py py-obj docutils literal"><span class="pre">satlas.stats.fitting.process_walk</span></code></a>(model,&nbsp;...)</td>
+<td>Given a model and H5 file with the results of a random walk, the parameters varied in the walk are set to the 50% percentile, and the uncertainty is set to either the difference between the 50% and 16% percentile, or between the 84% and 50%, whichever is the largest.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-satlas.loglikelihood">
+<span id="likelihood-calculations"></span><h2>Likelihood calculations<a class="headerlink" href="#module-satlas.loglikelihood" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of calculation of the loglikelihood for common distributions.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="loglikelihood/satlas.loglikelihood.poisson_llh.html#satlas.loglikelihood.poisson_llh" title="satlas.loglikelihood.poisson_llh"><code class="xref py py-obj docutils literal"><span class="pre">satlas.loglikelihood.poisson_llh</span></code></a>(y,&nbsp;f,&nbsp;x)</td>
+<td>Returns the loglikelihood for a Poisson distribution.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="loglikelihood/satlas.loglikelihood.create_gaussian_llh.html#satlas.loglikelihood.create_gaussian_llh" title="satlas.loglikelihood.create_gaussian_llh"><code class="xref py py-obj docutils literal"><span class="pre">satlas.loglikelihood.create_gaussian_llh</span></code></a>([...])</td>
+<td>Returns the loglikelihood-function for a Gaussian distribution, with the given uncertainty on the data points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="loglikelihood/satlas.loglikelihood.create_gaussian_priormap.html#satlas.loglikelihood.create_gaussian_priormap" title="satlas.loglikelihood.create_gaussian_priormap"><code class="xref py py-obj docutils literal"><span class="pre">satlas.loglikelihood.create_gaussian_priormap</span></code></a>(...)</td>
+<td>Generates a function that describes a Gaussian prior mapping around the given literature value with the given uncertainty.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-satlas.profiles">
+<span id="lineshapes"></span><h2>Lineshapes<a class="headerlink" href="#module-satlas.profiles" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of classes for different lineshapes, creating callables for easy and intuitive calculations.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="profiles/satlas.profiles.Crystalball.html#satlas.profiles.Crystalball" title="satlas.profiles.Crystalball"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.Crystalball</span></code></a>([fwhm,&nbsp;mu,&nbsp;amp,&nbsp;...])</td>
+<td>A callable Crystalball profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="profiles/satlas.profiles.Gaussian.html#satlas.profiles.Gaussian" title="satlas.profiles.Gaussian"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.Gaussian</span></code></a>([fwhm,&nbsp;mu,&nbsp;amp,&nbsp;...])</td>
+<td>A callable normalized Gaussian profile.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="profiles/satlas.profiles.Lorentzian.html#satlas.profiles.Lorentzian" title="satlas.profiles.Lorentzian"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.Lorentzian</span></code></a>([fwhm,&nbsp;mu,&nbsp;amp,&nbsp;...])</td>
+<td>A callable normalized Lorentzian profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="profiles/satlas.profiles.AsymmLorentzian.html#satlas.profiles.AsymmLorentzian" title="satlas.profiles.AsymmLorentzian"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.AsymmLorentzian</span></code></a>([fwhm,&nbsp;mu,&nbsp;...])</td>
+<td>A callable normalized Lorentzian profile with builtin asymmetry.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="profiles/satlas.profiles.Voigt.html#satlas.profiles.Voigt" title="satlas.profiles.Voigt"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.Voigt</span></code></a>([fwhm,&nbsp;mu,&nbsp;amp,&nbsp;ampIsArea])</td>
+<td>A callable normalized Voigt profile.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="profiles/satlas.profiles.PseudoVoigt.html#satlas.profiles.PseudoVoigt" title="satlas.profiles.PseudoVoigt"><code class="xref py py-obj docutils literal"><span class="pre">satlas.profiles.PseudoVoigt</span></code></a>([eta,&nbsp;fwhm,&nbsp;mu,&nbsp;amp])</td>
+<td>A callable normalized PseudoVoigt profile.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-satlas.utilities.utilities">
+<span id="utilities"></span><h2>Utilities<a class="headerlink" href="#module-satlas.utilities.utilities" title="Permalink to this headline">¶</a></h2>
+<p>Implementation of various functions that ease the work, but do not belong in one of the other modules.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="utilities/satlas.utilities.utilities.generate_spectrum.html#satlas.utilities.utilities.generate_spectrum" title="satlas.utilities.utilities.generate_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.utilities.generate_spectrum</span></code></a>(...)</td>
+<td>Generates a model by random sampling from the provided <a class="reference internal" href="generated/satlas.models.hfsmodel.HFSModel.html#satlas.models.hfsmodel.HFSModel" title="satlas.models.hfsmodel.HFSModel"><code class="xref py py-class docutils literal"><span class="pre">HFSModel</span></code></a> and range.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="utilities/satlas.utilities.utilities.poisson_interval.html#satlas.utilities.utilities.poisson_interval" title="satlas.utilities.utilities.poisson_interval"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.utilities.poisson_interval</span></code></a>(data)</td>
+<td>Calculates the confidence interval for the mean of a Poisson distribution.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="utilities/satlas.utilities.utilities.weighted_average.html#satlas.utilities.utilities.weighted_average" title="satlas.utilities.utilities.weighted_average"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.utilities.weighted_average</span></code></a>(x,&nbsp;...)</td>
+<td>Takes the weighted average of an array of values and the associated errors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="utilities/satlas.utilities.utilities.beta.html#satlas.utilities.utilities.beta" title="satlas.utilities.utilities.beta"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.utilities.beta</span></code></a>(mass,&nbsp;V)</td>
+<td>Calculates the beta-factor for a mass in amu and applied voltage in Volt.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="utilities/satlas.utilities.utilities.dopplerfactor.html#satlas.utilities.utilities.dopplerfactor" title="satlas.utilities.utilities.dopplerfactor"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.utilities.dopplerfactor</span></code></a>(mass,&nbsp;V)</td>
+<td>Calculates the Doppler shift of the laser frequency for a given mass in amu and voltage in V.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-satlas.utilities.plotting">
+<span id="visualisations"></span><h2>Visualisations<a class="headerlink" href="#module-satlas.utilities.plotting" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="plotting/satlas.utilities.plotting.generate_correlation_map.html#satlas.utilities.plotting.generate_correlation_map" title="satlas.utilities.plotting.generate_correlation_map"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.plotting.generate_correlation_map</span></code></a>(f,&nbsp;...)</td>
+<td>Generates a correlation map for either the chisquare or the MLE method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="plotting/satlas.utilities.plotting.generate_correlation_plot.html#satlas.utilities.plotting.generate_correlation_plot" title="satlas.utilities.plotting.generate_correlation_plot"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.plotting.generate_correlation_plot</span></code></a>(...)</td>
+<td>Given the random walk data, creates a triangle plot: distribution of a single parameter on the diagonal axes, 2D contour plots with 1, 2 and 3 sigma contours on the off-diagonal.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="plotting/satlas.utilities.plotting.generate_walk_plot.html#satlas.utilities.plotting.generate_walk_plot" title="satlas.utilities.plotting.generate_walk_plot"><code class="xref py py-obj docutils literal"><span class="pre">satlas.utilities.plotting.generate_walk_plot</span></code></a>(...)</td>
+<td>Given the random walk data, the random walk for the selected parameters is plotted.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+          </div>
+      <div class="spc-rightsidebar span3">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API reference</a><ul>
+<li><a class="reference internal" href="#models">Models</a><ul>
+<li><a class="reference internal" href="#general-models">General Models</a></li>
+<li><a class="reference internal" href="#specialized-models">Specialized Models</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-satlas.stats.fitting">Fitting routines</a></li>
+<li><a class="reference internal" href="#module-satlas.loglikelihood">Likelihood calculations</a></li>
+<li><a class="reference internal" href="#module-satlas.profiles">Lineshapes</a></li>
+<li><a class="reference internal" href="#module-satlas.utilities.utilities">Utilities</a></li>
+<li><a class="reference internal" href="#module-satlas.utilities.plotting">Visualisations</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">SATLAS &#8211; Statistical Analysis Toolbox for Laser Spectroscopy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="generated/satlas.models.basemodel.BaseModel.html"
+                        title="next chapter">satlas.models.basemodel.BaseModel</a></p>
+  <h3>This Page</h3>
+  <div>
+    <a href="_sources/api.rst.txt"
+       rel="nofollow">Show Source</a>
+  </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-navbar-bottom">
+      <div class="spc-navbar">
+        
+      </div>
+    </div>
+    <div class="container">
+    <div class="footer">
+    <div class="row-fluid">
+    <ul class="inline pull-left">
+      <li>
+        &copy; Copyright 2015, Wouter Gins.
+      </li>
+      <li>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.5.
+      </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
